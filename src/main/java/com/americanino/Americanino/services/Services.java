@@ -2,7 +2,12 @@ package com.americanino.Americanino.services;
 
 import com.americanino.Americanino.models.ModelClient;
 
-public interface Services {
+import java.util.List;
 
-    public ModelClient guardarClient(ModelClient modelClient) throws Exception;
+public interface Services<E> {
+
+
+    public List<E> buscarTodos() throws Exception;
+
+    public E guardarClient(E entidad) throws Exception;
 }
